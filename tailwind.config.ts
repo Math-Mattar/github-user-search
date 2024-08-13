@@ -1,20 +1,55 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+import tailwindcssAnimate from 'tailwindcss-animate';
 
 const config: Config = {
+  darkMode: ['class'],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: '',
   theme: {
     extend: {
+      fontSize: {
+        body: '15px',
+        h1: '26px',
+        h2: '22px',
+        h3: '16px',
+        h4: '13px',
+      },
+      lineHeight: {
+        xs: '20px',
+        sm: '24px',
+        md: '25px',
+        lg: '33xpx',
+        xl: '38px',
+      },
+      colors: {
+        background: 'var(--background)',
+        'background-card': 'var(--background-car)',
+        title: 'var(--title)',
+        subtitle: 'var(--subtitle)',
+        'join-date-text': 'var(--join-date-text)',
+        'bio-text': 'var(--bio-text)',
+        error: 'var(--error)',
+        white: 'var(--white)',
+        'hover-button': 'var(--hover-button)',
+      },
+      boxShadow: {
+        card: '0 16px 30px -10px rgba(70,96,187,19.86%)',
+      },
+      borderRadius: {
+        sm: '10px',
+        md: '15px',
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'search-icon': "url('/search-icon.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssAnimate],
 };
+
 export default config;
