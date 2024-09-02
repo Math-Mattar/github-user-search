@@ -28,7 +28,8 @@ const config: Config = {
       },
       colors: {
         background: 'var(--background)',
-        'background-card': 'var(--background-car)',
+        'background-card': 'var(--background-card)',
+        'background-details': 'var(--background-details)',
         title: 'var(--title)',
         subtitle: 'var(--subtitle)',
         'join-date-text': 'var(--join-date-text)',
