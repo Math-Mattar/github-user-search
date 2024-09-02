@@ -1,6 +1,9 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
+import { Footer } from '@/common/Footer';
+import { Header } from '@/common/Header';
+import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
+import { ThemeProvider } from '@/context/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} flex flex-col items-center bg-background dark:bg-background`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          // enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

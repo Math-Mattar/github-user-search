@@ -1,17 +1,11 @@
-import { HomePage } from '@/containers/HomePage';
-import { ThemeProvider } from '@/context/ThemeProvider';
+import { Card } from '@/containers/Card';
+import { SearchContainer } from '@/containers/SearchContainer';
 
 export default function Home() {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <main>
-        <HomePage />
-      </main>
-    </ThemeProvider>
+    <main className="flex min-w-80 max-w-[730px] flex-col gap-4">
+      <SearchContainer />
+      <Card />
+    </main>
   );
 }
