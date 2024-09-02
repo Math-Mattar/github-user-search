@@ -4,25 +4,27 @@
 
 @layer base {
   :root {
-    --background: #F6F8FF;
-    --background-card:#FEFEFE;
-    --title: #2B3442;
-    --subtitle: #0079FF;
-    --join-date-text: #697C9A;
-    --bio-text: #4B6A9B;
-    --error:#F74646;
-    --white:#ffffff;
-    --hover-button: #60ABFF;
+    --background: #f6f8ff;
+    --background-card: #fefefe;
+    --background-details: #F6F8FF;
+    --title: #2b3442;
+    --subtitle: #0079ff;
+    --join-date-text: #697c9a;
+    --bio-text: #4b6a9b;
+    --error: #f74646;
+    --white: #ffffff;
+    --hover-button: #60abff;
   }
 
   .dark {
-    --background: #141D2F;
-    --background-card:#1E2A47;
-    --title: #FFFFFF;
-    --subtitle: #0079FF;
-    --join-date-text: #FFFFFF;
-    --bio-text: #FFFFFF;
-    --error:#F74646;
+    --background: #141d2f;
+    --background-card: #1e2a47;
+    --background-details: #F6F8FF;
+    --title: #ffffff;
+    --subtitle: #0079ff;
+    --join-date-text: #ffffff;
+    --bio-text: #ffffff;
+    --error: #f74646;
+    --hover-button: #60abff;
   }
 }
-
