@@ -26,6 +26,9 @@ const config: Config = {
         lg: '33xpx',
         xl: '38px',
       },
+      letterSpacing: {
+        theme: '2.5px',
+      },
       colors: {
         background: 'var(--background)',
         'background-card': 'var(--background-card)',
