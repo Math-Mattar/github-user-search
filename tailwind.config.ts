@@ -18,6 +18,7 @@ const config: Config = {
         h2: '22px',
         h3: '16px',
         h4: '13px',
+        h5: '11px',
       },
       lineHeight: {
         xs: '20px',
@@ -29,6 +30,14 @@ const config: Config = {
       letterSpacing: {
         theme: '2.5px',
       },
+      textColor: {
+        title: 'var(--title)',
+        subtitle: 'var(--subtitle)',
+        'join-date-text': 'var(--join-date-text)',
+        'bio-text': 'var(--bio-text)',
+        'account-title': 'var(--account-title)',
+        'account-statistics': 'var(--account-statistics)',
+      },
       colors: {
         background: 'var(--background)',
         'background-card': 'var(--background-card)',
@@ -37,6 +46,8 @@ const config: Config = {
         subtitle: 'var(--subtitle)',
         'join-date-text': 'var(--join-date-text)',
         'bio-text': 'var(--bio-text)',
+        'account-title': 'var(--account-title)',
+        'account-statistics': 'var(--account-statistics)',
         error: 'var(--error)',
         white: 'var(--white)',
         'hover-button': 'var(--hover-button)',
