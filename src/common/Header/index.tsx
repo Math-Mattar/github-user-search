@@ -36,11 +36,11 @@ export function Header() {
       <Button variant="theme" size="theme" onClick={() => toggleTheme(theme)}>
         {theme === 'dark' ? (
           <>
-            Light <Sun />
+            LIGHT <Sun />
           </>
         ) : (
           <>
-            Dark <Moon />
+            DARK <Moon />
           </>
         )}
       </Button>
