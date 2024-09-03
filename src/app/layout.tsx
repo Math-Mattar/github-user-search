@@ -1,11 +1,14 @@
 import '@/styles/globals.css';
 import { Footer } from '@/common/Footer';
 import { Header } from '@/common/Header';
-import { Inter } from 'next/font/google';
+import { Space_Mono } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/context/ThemeProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+const mono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-col items-center bg-background`}
+        className={`${mono.className} flex flex-col items-center bg-background`}
       >
         <ThemeProvider
           attribute="class"
