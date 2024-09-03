@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/Button';
+import { Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
@@ -16,8 +17,6 @@ export function Header() {
     return null;
   }
 
-  const content = theme === 'dark' ? 'Dark' : 'Light';
-
   function toggleTheme(currentTheme: string) {
     switch (currentTheme) {
       case 'light':
@@ -32,9 +31,19 @@ export function Header() {
   }
 
   return (
-    <header>
-      <h1 className="">devfinder</h1>
-      <Button onClick={() => toggleTheme(theme)}>{content}</Button>
+    <header className="flex w-full items-center justify-between px-6 pb-8 pt-7">
+      <h1 className="text-h1 font-bold">devfinder</h1>
+      <Button variant="theme" size="theme" onClick={() => toggleTheme(theme)}>
+        {theme === 'dark' ? (
+          <>
+            Light <Sun />
+          </>
+        ) : (
+          <>
+            Dark <Moon />
+          </>
+        )}
+      </Button>
     </header>
   );
 }
