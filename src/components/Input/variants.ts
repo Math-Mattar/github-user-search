@@ -5,7 +5,7 @@ export const InputVariants = cva('flex', {
     variant: {
       default: 'bg-red',
       search:
-        'relative w-full max-w-[730px] border-0 bg-background-card py-5 pl-20 shadow-card placeholder:text-bio-text',
+        'placeholder:text-placeholder relative mobile:w-[327px] tablet:w-[573px] desktop:w-[730px] max-w-[730px] truncate border-0 bg-background-card py-4 pl-11 pr-[29.969%] text-h4 shadow-card',
     },
   },
   defaultVariants: {

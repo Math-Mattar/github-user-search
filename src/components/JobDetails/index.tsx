@@ -1,7 +1,6 @@
 'use client';
 
 import { Link } from '../Link';
-import { UserDetails } from '@/utils/types';
 import { useTheme } from 'next-themes';
 import { useUser } from '@/hooks/useUser';
 import Address from '@/icons/Address';
@@ -15,26 +14,38 @@ export function JobDetails() {
   const { userDetails } = useUser();
 
   if (!userDetails) return null;
-  const { location, blog, twitter_username, company } =
-    userDetails as UserDetails;
+  const { location, blog, twitter_username, company } = userDetails;
 
   return (
     <section className="flex flex-col gap-4">
       <div className="flex gap-5">
-        <Address fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'} />
-        <p>{location || 'Not Available'}</p>
+        <Address
+          fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'}
+          className="w-5"
+        />
+        <p className="text-h4">{location || 'Not Available'}</p>
       </div>
       <div className="flex gap-5">
-        <Blog fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'} />
-        <Link href={blog || '#'}>{blog || 'Not Available'}</Link>
+        <Blog fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'} className="w-5" />
+        <Link className="text-h4" href={blog} target="_blank">
+          {blog.slice(4) || 'Not Available'}
+        </Link>
       </div>
       <div className="flex gap-5">
-        <Twitter fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'} />
-        <p>{twitter_username ? `@${twitter_username}` : 'Not Available'}</p>
+        <Twitter
+          fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'}
+          className="w-5"
+        />
+        <p className="text-h4">
+          {twitter_username ? `@${twitter_username}` : 'Not Available'}
+        </p>
       </div>
       <div className="flex gap-5">
-        <Company fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'} />
-        <p>{company || 'Not Available'}</p>
+        <Company
+          fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'}
+          className="w-5"
+        />
+        <p className="text-h4">{company || 'Not Available'}</p>
       </div>
     </section>
   );
