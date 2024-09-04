@@ -1,7 +1,7 @@
 export function Footer() {
   return (
-    <footer>
-      <p>Create bt Mathews Mattar</p>
+    <footer className="mt-4">
+      <p>Create by Mathews Mattar</p>
     </footer>
   );
 }
