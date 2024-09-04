@@ -7,14 +7,16 @@
     --background: #f6f8ff;
     --background-card: #fefefe;
     --background-details: #F6F8FF;
+    --button-text: #FFFFFF;
+    --placeholder-text: #4B6A9B;
     --title: #2b3442;
     --subtitle: #0079ff;
-    --join-date-text: #697c9a;
+    --date-text: #697c9a;
     --bio-text: #4b6a9b;
     --account-title: #4b6a9b;
     --account-statistics: #2b3442;
-    --error: #f74646;
-    --white: #ffffff;
+    --job-text: #4B6A9B;
+    --error-text: #f74646;
     --hover-button: #60abff;
   }
 
