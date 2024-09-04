@@ -18,7 +18,6 @@ export function SearchContainer() {
   async function fetchUserDetails(username: string) {
     try {
       const res = await fetch(`https://api.github.com/users/${username}`);
-      console.log(res.ok);
       if (!res.ok) {
         throw new Error('User not found');
       }
@@ -35,10 +34,10 @@ export function SearchContainer() {
   }
 
   return (
-    <form action="get" onSubmit={handleSubmit} className="relative">
+    <form onSubmit={handleSubmit} className="relative mx-auto">
       <Search
         fill="#0079ff"
-        className="absolute left-8 top-[50%] z-10 translate-y-[-50%]"
+        className="absolute left-4 top-[50%] z-10 translate-y-[-50%]"
       />
       <Input
         type="search"
