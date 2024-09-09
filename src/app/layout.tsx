@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${mono.className} flex flex-col items-center bg-background`}
+        className={`${mono.className} flex h-[100svh] flex-col content-center items-center bg-background desktop:justify-center`}
       >
         <ThemeProvider
           attribute="class"

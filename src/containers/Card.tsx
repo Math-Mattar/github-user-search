@@ -11,7 +11,7 @@ export function Card() {
   if (!userDetails) return null;
 
   return (
-    <section className="mx-auto flex w-[87.2%] flex-col gap-6 rounded-md bg-background-card px-6 pb-12 pt-8 shadow-card">
+    <section className="mx-auto flex w-full flex-col gap-6 rounded-md bg-background-card px-6 pb-12 pt-8 shadow-card tablet:gap-8 tablet:p-10">
       <PersonalDetails />
       <AccountDetails />
       <JobDetails />

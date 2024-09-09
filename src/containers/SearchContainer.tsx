@@ -1,19 +1,19 @@
 'use client';
 
 import { Button } from '@/components/Button';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { Input } from '@/components/Input';
 
 import { useUser } from '@/hooks/useUser';
 import Search from '@/icons/Search';
 
 export function SearchContainer() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('octocat');
   const { setUserDetails } = useUser();
 
-  const handleValue = (e: ChangeEvent<HTMLInputElement>) => {
+  function handleValue(e: ChangeEvent<HTMLInputElement>) {
     setUsername(e.target.value);
-  };
+  }
 
   async function fetchUserDetails(username: string) {
     try {
@@ -28,13 +28,17 @@ export function SearchContainer() {
     }
   }
 
+  useEffect(() => {
+    fetchUserDetails('octocat');
+  }, []);
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     fetchUserDetails(username);
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative mx-auto">
+    <form onSubmit={handleSubmit} className="relative mx-auto w-full">
       <Search
         fill="#0079ff"
         className="absolute left-4 top-[50%] z-10 translate-y-[-50%]"

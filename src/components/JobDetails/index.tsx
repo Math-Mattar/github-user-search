@@ -17,7 +17,7 @@ export function JobDetails() {
   const { location, blog, twitter_username, company } = userDetails;
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col flex-wrap gap-4 tablet:h-16 tablet:justify-between">
       <div className="flex gap-5">
         <Address
           fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'}
@@ -28,7 +28,7 @@ export function JobDetails() {
       <div className="flex gap-5">
         <Blog fill={theme === 'dark' ? '#FFFFFF' : '#4B6A9B'} className="w-5" />
         <Link className="text-h4" href={blog} target="_blank">
-          {blog.slice(4) || 'Not Available'}
+          {blog || 'Not Available'}
         </Link>
       </div>
       <div className="flex gap-5">

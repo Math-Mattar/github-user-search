@@ -31,7 +31,7 @@ export function Header() {
   }
 
   return (
-    <header className="flex w-full items-center justify-between px-6 pb-8 pt-7">
+    <header className="flex w-full max-w-[730px] items-center justify-between px-6 pb-8 pt-7 tablet:mt-36 tablet:px-24">
       <h1 className="text-h1 font-bold">devfinder</h1>
       <Button variant="theme" size="theme" onClick={() => toggleTheme(theme)}>
         {theme === 'dark' ? (

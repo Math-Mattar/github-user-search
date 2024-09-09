@@ -25,7 +25,7 @@ export function PersonalDetails() {
 
   return (
     <section className="flex flex-col justify-center gap-8">
-      <div className="flex gap-5">
+      <div className="flex items-center gap-5">
         <Avatar className="h-[70px] w-[70px] tablet:h-[117px] tablet:w-[117px]">
           <AvatarImage src={avatar_url} alt={`${login} avatar`} />
         </Avatar>
@@ -42,10 +42,10 @@ export function PersonalDetails() {
             </Link>
           </div>
 
-          <h4 className="text-date text-h4">{formatDate(created_at)}</h4>
+          <h4 className="text-h4 text-date">{formatDate(created_at)}</h4>
         </div>
       </div>
-      <p className="font-regular text-bio text-h4 leading-md">
+      <p className="font-regular text-h4 leading-md text-bio">
         {bio || 'This profile has no bio'}
       </p>
     </section>
